@@ -1,6 +1,17 @@
+/*-------MY SASS---------*/
+
+//VARIABLES
+$basefont:Verdana, Geneva, sans-serif;
+$accent:#1c2225;
+$wk: -webkit-;
+$newmargin:-10px;
+$fontcolor:#fff;
+
+
 /*-------Elements---------*/
 
-body{font-family: Verdana, Geneva, sans-serif; 
+//VARIABLE EXAMPLE
+body{font-family: $basefont; 
 	font-style: normal;
 	font-variant: normal;
 	font-weight: 500;}
@@ -12,23 +23,23 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 	
 .grayscale{ 
     filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);  /* For Webkit browsers */
+    #{$wk}filter: grayscale(100%);  /* For Webkit browsers */
     filter: gray;  /* For IE 6 - 9 */
-    -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */}
+    #{$wk}transition: all .6s ease;  /* Transition for Webkit browsers */}
 
 
 .grayscale:hover{ 
     filter: grayscale(0%);
-    -webkit-filter: grayscale(0%);
+   #{$wk}filter: grayscale(0%);
     filter: none;
 }
 
 
 #grayscale{ 
     filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);  /* For Webkit browsers */
+   #{$wk}filter: grayscale(100%);  /* For Webkit browsers */
     filter: gray;  /* For IE 6 - 9 */
-    -webkit-transition: all .6s ease;  /* Transition for Webkit browsers */}
+    #{$wk}transition: all .6s ease;  /* Transition for Webkit browsers */}
 
 
 #send_message{padding:130px;}
@@ -38,9 +49,10 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 
 /*-------Header---------*/	
 
-#header{margin-top:-10px;
-		margin-left:-10px;
-		margin-right:-10px;}
+//VARIABLE EXAMPLE
+#header{margin-top:$newmargin;
+		margin-left:$newmargin;
+		margin-right:$newmargin;}
 		
 #nav{padding-right:40px;
 	padding-bottom:40px;
@@ -69,8 +81,8 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 		
 #work_header{background-color:#1c2225;
 			margin-top:-20px;
-			margin-left:-10px;
-			margin-right:-10px;}
+			margin-left:$newmargin;
+			margin-right:$newmargin;}
 
 #work_nav{padding:40px;
 		padding-right:40px;
@@ -84,9 +96,9 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 		display:inline;}
 		
 #work_nav a{text-decoration:none;
-		color:white;}
+		color:$fontcolor;}
 		
-#work_intro{color:white;
+#work_intro{color:$fontcolor;
 			padding-left:60px;
 			padding-right:40%;
 			padding-bottom:40px;
@@ -99,8 +111,9 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 		
 /*-------Skills---------*/
 
-#skills{margin-left:-10px;
-		margin-right:-10px;
+
+#skills{margin-left:$newmargin;
+		margin-right:$newmargin;
 		padding-top:80px;
 		padding-left:60px;
 		padding-bottom:440px;
@@ -129,9 +142,10 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 
 /*-------profile_content---------*/
 
+
 #profile_content{
-				margin-left:-10px;
-				margin-right:-10px;
+				margin-left:$newmargin;
+				margin-right:$newmargin;
 				
 				padding-bottom:100px;
 				padding-top:100px;}
@@ -139,7 +153,7 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 #profile_pic{margin-left:-30px;}				
 				
 #profile_content a{text-decoration:none;
-					color:#1c2225;}					
+					color:$accent;}					
 
 #profile_pic img{width:43%;}
 
@@ -170,7 +184,7 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 		padding-bottom:60px;
 		margin-top:60px;
 		margin-left:-30px;
-		margin-right:-10px;
+		margin-right:$newmargin;
 		border-top:1px solid #D9DDDE;
 		text-align:center;}
 		
@@ -180,13 +194,13 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 		
 
 .button {padding:7px;
-    border: 2px solid #1c2225;
-    color:white;
-    background-color:#1c2225;
+    border: 2px solid $accent;
+    color:$fontcolor;
+    background-color:$accent;
     text-decoration:none;
     font-size:1.2em;}
 
-.button a{color:white;}  
+.button a{color:$fontcolor;}  
 
 
 
@@ -194,13 +208,13 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 /*-------Footer---------*/
 
 #footer{text-align:center;
-		margin-left:-10px;
-		margin-right:-10px;
-		color:white;}
+		margin-left:$newmargin;
+		margin-right:$newmargin;
+		color:$fontcolor;}
 
 #Fnav{padding:20px;
-	 background-color:#1c2225;
-	 color:white;}		
+	 background-color:$accent;
+	 color:$fontcolor;}		
 
 #Fnav li{list-style:none;
 		padding-right:40px;
@@ -208,7 +222,7 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 		display:inline;}
 		
 #Fnav a{text-decoration:none;
-		color:white;}	
+		color:$fontcolor;}	
 
 #copyright{font-size:.7em;}
 

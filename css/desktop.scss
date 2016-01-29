@@ -7,6 +7,10 @@ $wk: -webkit-;
 $newmargin:-10px;
 $fontcolor:#fff;
 
+$color-highlight: lighten($accent,30);
+$color-base: red;
+$color-dark: darken($color-base,30);
+
 
 /*-------Elements---------*/
 
@@ -53,20 +57,24 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 #header{margin-top:$newmargin;
 		margin-left:$newmargin;
 		margin-right:$newmargin;}
-		
-#nav{padding-right:40px;
-	padding-bottom:40px;
-		padding-left:25px;
-		padding-top:100px;}		
 
-#nav li{list-style:none;
-		padding-right:40px;
-		font-size: 1em;
-		display:inline;}
+//NESTING SELECTORS	EXAMPLE	
+#nav{padding-right:40px;
+	   padding-bottom:40px;
+		padding-left:25px;
+		padding-top:100px;		
+
+            li{list-style:none;
+                padding-right:40px;
+		        font-size: 1em;
+		        display:inline;}
 		
-#nav a{text-decoration:none;
-		color:#1c2225;}	
+            a{text-decoration:none;
+		      color:#1c2225;}	
+    
+    }//END NAV NESTING
 		
+
 #name_header{padding:60px;
 			 padding-top:90px;
 			 padding-bottom:90px;
@@ -82,21 +90,23 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 #work_header{background-color:#1c2225;
 			margin-top:-20px;
 			margin-left:$newmargin;
-			margin-right:$newmargin;}
+            margin-right:$newmargin;}
 
+//NESTING SELECTOR EXAMPLE
 #work_nav{padding:40px;
 		padding-right:40px;
-	padding-bottom:40px;
+	   padding-bottom:40px;
 		padding-left:25px;
-		padding-top:100px;}
+		padding-top:100px;
 			
-#work_nav li{list-style:none;
-		padding-right:40px;
-		font-size: 1em;
-		display:inline;}
+        li{list-style:none;
+		  padding-right:40px;
+		  font-size: 1em;
+		  display:inline;}
 		
-#work_nav a{text-decoration:none;
+        a{text-decoration:none;
 		color:$fontcolor;}
+    }
 		
 #work_intro{color:$fontcolor;
 			padding-left:60px;
@@ -196,7 +206,7 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 .button {padding:7px;
     border: 2px solid $accent;
     color:$fontcolor;
-    background-color:$accent;
+    background-color:$color-dark;
     text-decoration:none;
     font-size:1.2em;}
 
@@ -213,7 +223,7 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 		color:$fontcolor;}
 
 #Fnav{padding:20px;
-	 background-color:$accent;
+	 background-color:$color-highlight;
 	 color:$fontcolor;}		
 
 #Fnav li{list-style:none;

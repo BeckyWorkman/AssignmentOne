@@ -12,7 +12,7 @@ h1, h2, h3, h4, .button {
   font-variant: normal;
   font-weight: 500; }
 
-.grayscale {
+.grayscale, #grayscale {
   filter: grayscale(100%);
   -webkit-filter: grayscale(100%);
   /* For Webkit browsers */
@@ -21,19 +21,10 @@ h1, h2, h3, h4, .button {
   -webkit-transition: all .6s ease;
   /* Transition for Webkit browsers */ }
 
-.grayscale:hover {
+.grayscale:hover, #grayscale:hover {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
   filter: none; }
-
-#grayscale {
-  filter: grayscale(100%);
-  -webkit-filter: grayscale(100%);
-  /* For Webkit browsers */
-  filter: gray;
-  /* For IE 6 - 9 */
-  -webkit-transition: all .6s ease;
-  /* Transition for Webkit browsers */ }
 
 #send_message {
   padding: 130px; }
@@ -146,6 +137,9 @@ h1, h2, h3, h4, .button {
 #bucket3 {
   margin-top: -36px; }
 
+#skills {
+  background-color: #768c97; }
+
 /*-------profile_content---------*/
 #profile_content {
   margin-left: -10px;
@@ -221,7 +215,7 @@ h1, h2, h3, h4, .button {
 
 #Fnav {
   padding: 20px;
-  background-color: #5e727c;
+  background-color: #768c97;
   color: #fff; }
 
 #Fnav li {

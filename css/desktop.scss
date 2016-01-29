@@ -7,7 +7,8 @@ $wk: -webkit-;
 $newmargin:-10px;
 $fontcolor:#fff;
 
-$color-highlight: lighten($accent,30);
+//SASS BUILT IN FUNCTIONS
+$color-highlight: lighten($accent,40);
 $color-base: red;
 $color-dark: darken($color-base,30);
 
@@ -38,12 +39,8 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
     filter: none;
 }
 
-
-#grayscale{ 
-    filter: grayscale(100%);
-   #{$wk}filter: grayscale(100%);  /* For Webkit browsers */
-    filter: gray;  /* For IE 6 - 9 */
-    #{$wk}transition: all .6s ease;  /* Transition for Webkit browsers */}
+//EXTEND FEATURE
+#grayscale{@extend .grayscale;}
 
 
 #send_message{padding:130px;}
@@ -150,6 +147,11 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 #bucket3{margin-top:-36px;}	
 
 
+@mixin skills{background-color:$color-highlight;}
+    
+    
+#skills{@include skills;}
+
 /*-------profile_content---------*/
 
 
@@ -206,7 +208,7 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 .button {padding:7px;
     border: 2px solid $accent;
     color:$fontcolor;
-    background-color:$color-dark;
+    background-color:$color-dark;//DARKEN BUILT IN
     text-decoration:none;
     font-size:1.2em;}
 
@@ -223,7 +225,7 @@ h1, h2, h3, h4, .button{	font-family: "Gill Sans", "Book Antiqua", Palatino, ser
 		color:$fontcolor;}
 
 #Fnav{padding:20px;
-	 background-color:$color-highlight;
+	 background-color:$color-highlight;//LIGHTEN BUILT IN 
 	 color:$fontcolor;}		
 
 #Fnav li{list-style:none;
